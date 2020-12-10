@@ -151,7 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Resource\Source\CloseSystem.cpp" />
+    <ClCompile Include="Resource\Source\Fps.cpp" />
     <ClCompile Include="Resource\Source\Main.cpp" />
+    <ClCompile Include="Resource\Source\RunSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource\Source\CloseSystem.h" />
+    <ClInclude Include="Resource\Source\Fps.h" />
+    <ClInclude Include="Resource\Source\RunSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

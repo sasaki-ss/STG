@@ -4,10 +4,45 @@
     <Filter Include="Project">
       <UniqueIdentifier>{05f7932f-acc5-4d95-b3ba-26b051fa7736}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Project\System">
+      <UniqueIdentifier>{106dda39-77e3-448a-aa6b-52e77e0e5629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\System\RunSystem">
+      <UniqueIdentifier>{6d083ed5-b24b-47c4-9f48-92e3db79a1e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\System\CloseSystem">
+      <UniqueIdentifier>{fd886d44-1e0b-4346-a906-db961aa68230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common">
+      <UniqueIdentifier>{737d1683-c355-43b4-ab80-15659844fff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\FPS">
+      <UniqueIdentifier>{01ee6dc7-090f-4860-8539-c642228ac3df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\Main.cpp">
       <Filter>Project</Filter>
     </ClCompile>
+    <ClCompile Include="Resource\Source\RunSystem.cpp">
+      <Filter>Project\System\RunSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\CloseSystem.cpp">
+      <Filter>Project\System\CloseSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Fps.cpp">
+      <Filter>Project\Common\FPS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource\Source\RunSystem.h">
+      <Filter>Project\System\RunSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\CloseSystem.h">
+      <Filter>Project\System\CloseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Fps.h">
+      <Filter>Project\Common\FPS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
