@@ -14,7 +14,9 @@ bool CloseSystem::ExitSystem(eCloseType _closeType) {
 			return false;
 		}
 		break;
+	//ˆÙí‚ª”­¶‚µ‚½ê‡‚Ìˆ—
 	case eCloseType::Abnormal_Close:
+		MessageBox(NULL, TEXT("Forced termination."), "System Error", MB_OK | MB_ICONERROR);
 		break;
 	case eCloseType::Read_Error:
 		break;

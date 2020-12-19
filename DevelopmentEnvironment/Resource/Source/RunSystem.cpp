@@ -2,6 +2,7 @@
 #include "RunSystem.h"
 
 #include "Fps.h"
+#include "GameRunSystem.h"
 
 //初期化処理
 void RunSystem::Init() {
@@ -27,6 +28,14 @@ void RunSystem::Init() {
 //実行処理
 void RunSystem::Run() {
 	Fps fps;
+	GameRunSystem gRunSystem;
+
+	//ゲーム実行システムの初期化処理
+	if (!gRunSystem.Init()) {
+		CloseSystem::ExitSystem(eCloseType::Init_Error);
+		RunSystem::End();
+		return;
+	}
 
 	while (!ProcessMessage()) {
 		//終了確認処理
@@ -42,6 +51,11 @@ void RunSystem::Run() {
 
 		//FPSの更新
 		fps.Update();
+
+		//ゲームの処理
+		if (!gRunSystem.Run()) {
+			return;
+		}
 
 		//裏画面を反映させる
 		ScreenFlip();

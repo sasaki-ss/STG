@@ -19,6 +19,30 @@
     <Filter Include="Project\Common\FPS">
       <UniqueIdentifier>{01ee6dc7-090f-4860-8539-c642228ac3df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Project\Scene">
+      <UniqueIdentifier>{ef7f2796-2691-4269-83fc-215266935607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\System\GameRunSystem">
+      <UniqueIdentifier>{2c82b7a0-37e0-454f-a171-7922f4daf08e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Scene\SceneManager">
+      <UniqueIdentifier>{ccae2ea3-c6a3-4897-a7a2-9b2c9cb68eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Scene\Scenes">
+      <UniqueIdentifier>{52d198ca-e80b-4916-9cc9-a1fe8d3095da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Scene\Scenes\Title">
+      <UniqueIdentifier>{7655148e-732e-4958-8f30-cc4c3025c219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Scene\Scenes\Menu">
+      <UniqueIdentifier>{6f5b87d3-7c6d-47a0-ab0a-5fd221d60f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Scene\Scenes\InGame">
+      <UniqueIdentifier>{bf452a7f-0323-49f9-850d-d5a0681271ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\Parameter">
+      <UniqueIdentifier>{fbf6efcb-1f54-43e8-96d9-cb7c446f739c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\Main.cpp">
@@ -33,6 +57,27 @@
     <ClCompile Include="Resource\Source\Fps.cpp">
       <Filter>Project\Common\FPS</Filter>
     </ClCompile>
+    <ClCompile Include="Resource\Source\GameRunSystem.cpp">
+      <Filter>Project\System\GameRunSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Title.cpp">
+      <Filter>Project\Scene\Scenes\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Scene.cpp">
+      <Filter>Project\Scene\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\ShareParameter.cpp">
+      <Filter>Project\Common\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\SceneManager.cpp">
+      <Filter>Project\Scene\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\InGame.cpp">
+      <Filter>Project\Scene\Scenes\InGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Menu.cpp">
+      <Filter>Project\Scene\Scenes\Menu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource\Source\RunSystem.h">
@@ -43,6 +88,36 @@
     </ClInclude>
     <ClInclude Include="Resource\Source\Fps.h">
       <Filter>Project\Common\FPS</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Task.h">
+      <Filter>Project\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\SceneData.h">
+      <Filter>Project\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\ISceneChanger.h">
+      <Filter>Project\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\GameRunSystem.h">
+      <Filter>Project\System\GameRunSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\SceneManager.h">
+      <Filter>Project\Scene\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Scene.h">
+      <Filter>Project\Scene\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Title.h">
+      <Filter>Project\Scene\Scenes\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\ShareParameter.h">
+      <Filter>Project\Common\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\InGame.h">
+      <Filter>Project\Scene\Scenes\InGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Menu.h">
+      <Filter>Project\Scene\Scenes\Menu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
