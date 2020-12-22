@@ -4,9 +4,10 @@
 #include "Task.h"
 #include "ISceneChanger.h"
 #include "ShareParameter.h"
+#include "GameSystem.h"
 
 //シーンクラス
-class Scene : public Task {
+class Scene : public Task, public virtual GameSystem {
 protected:
 	ISceneChanger* sceneChanger;	//シーン切り替えを使うための変数
 	ShareParameter* shareParameter;	//データ共有クラス

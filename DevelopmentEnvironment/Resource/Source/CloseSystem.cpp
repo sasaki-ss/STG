@@ -18,7 +18,9 @@ bool CloseSystem::ExitSystem(eCloseType _closeType) {
 	case eCloseType::Abnormal_Close:
 		MessageBox(NULL, TEXT("Forced termination."), "System Error", MB_OK | MB_ICONERROR);
 		break;
+	//読み込みエラーが発生した場合
 	case eCloseType::Read_Error:
+		MessageBox(NULL, TEXT("Forced termination."), "Read failure", MB_OK | MB_ICONERROR);
 		break;
 	//初期化エラーの強制終了処理
 	case eCloseType::Init_Error:

@@ -3,6 +3,7 @@
 
 #include "SceneManager.h"
 #include "CloseSystem.h"
+#include "GameSystem.h"
 
 //ゲーム実行システムクラス
 class GameRunSystem final :public CloseSystem {
@@ -14,6 +15,7 @@ private:
 	};
 
 	SceneManager sceneManager;	//シーンマネージャー
+	GameSystem gameSystem;		//ゲームシステム
 public:
 	bool Init();
 	//実行処理

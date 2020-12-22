@@ -90,6 +90,7 @@
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\kaity\Documents\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -107,6 +108,7 @@
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\kaity\Documents\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,6 +126,7 @@
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\kaity\Documents\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -141,6 +144,7 @@
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\kaity\Documents\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,8 +156,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\CloseSystem.cpp" />
+    <ClCompile Include="Resource\Source\Directory.cpp" />
     <ClCompile Include="Resource\Source\Fps.cpp" />
     <ClCompile Include="Resource\Source\GameRunSystem.cpp" />
+    <ClCompile Include="Resource\Source\GameSystem.cpp" />
+    <ClCompile Include="Resource\Source\Image.cpp" />
     <ClCompile Include="Resource\Source\InGame.cpp" />
     <ClCompile Include="Resource\Source\Main.cpp" />
     <ClCompile Include="Resource\Source\Menu.cpp" />
@@ -165,8 +172,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource\Source\CloseSystem.h" />
+    <ClInclude Include="Resource\Source\Directory.h" />
     <ClInclude Include="Resource\Source\Fps.h" />
     <ClInclude Include="Resource\Source\GameRunSystem.h" />
+    <ClInclude Include="Resource\Source\GameSystem.h" />
+    <ClInclude Include="Resource\Source\Image.h" />
     <ClInclude Include="Resource\Source\InGame.h" />
     <ClInclude Include="Resource\Source\ISceneChanger.h" />
     <ClInclude Include="Resource\Source\Menu.h" />

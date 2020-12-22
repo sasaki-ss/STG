@@ -43,6 +43,18 @@
     <Filter Include="Project\Common\Parameter">
       <UniqueIdentifier>{fbf6efcb-1f54-43e8-96d9-cb7c446f739c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Project\System\GameSystem">
+      <UniqueIdentifier>{e2581f38-69f0-4a59-99a2-8180df90c8a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Resource">
+      <UniqueIdentifier>{d22cc90c-8bb3-4a8f-909a-94ec87bd8fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Resource\Image">
+      <UniqueIdentifier>{4202f4f9-c3e3-47b9-9638-9eda57723d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\Directory">
+      <UniqueIdentifier>{887a1704-a20e-4fef-af06-a31cbde87eb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\Main.cpp">
@@ -77,6 +89,15 @@
     </ClCompile>
     <ClCompile Include="Resource\Source\Menu.cpp">
       <Filter>Project\Scene\Scenes\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\GameSystem.cpp">
+      <Filter>Project\System\GameSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Image.cpp">
+      <Filter>Project\Resource\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Directory.cpp">
+      <Filter>Project\Common\Directory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +139,15 @@
     </ClInclude>
     <ClInclude Include="Resource\Source\Menu.h">
       <Filter>Project\Scene\Scenes\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\GameSystem.h">
+      <Filter>Project\System\GameSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Image.h">
+      <Filter>Project\Resource\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Directory.h">
+      <Filter>Project\Common\Directory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
