@@ -7,13 +7,15 @@
 #include "GameSystem.h"
 
 //シーンクラス
-class Scene : public Task, public virtual GameSystem {
+class Scene : public Task {
 protected:
 	ISceneChanger* sceneChanger;	//シーン切り替えを使うための変数
 	ShareParameter* shareParameter;	//データ共有クラス
+	GameSystem* gameSystem;			//ゲームのリソースなどの総合管理クラス
 public:
 	//コンストラクタ
-	Scene(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter);
+	Scene(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter,
+		GameSystem* _gameSystem);
 	//初期化処理
 	virtual void Init() {}
 	//終了処理

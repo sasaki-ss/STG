@@ -7,7 +7,8 @@
 //タイトルクラス
 class Menu :public Scene {
 public:
-	Menu(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter);
+	Menu(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter,
+		GameSystem* _gameSystem);
 	//更新処理
 	void Update();
 	//描画処理

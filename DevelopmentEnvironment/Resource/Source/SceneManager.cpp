@@ -6,9 +6,9 @@
 #include "Menu.h"
 
 //コンストラクタ
-SceneManager::SceneManager() {
+SceneManager::SceneManager(GameSystem* _gameSystem) {
 	shareParameter = new ShareParameter();
-	scenes.push(std::make_shared<Title>(this, shareParameter));
+	scenes.push(std::make_shared<InGame>(this, shareParameter, _gameSystem));
 	nowScene = eScene::Title;
 }
 
@@ -28,7 +28,7 @@ void SceneManager::Draw() {
 
 //シーン切り替え処理
 void SceneManager::SceneChange(eScene _nextScene, ShareParameter* _parameter,
-	const bool _isStack, const bool _isBack) {
+	GameSystem* _gameSystem, const bool _isStack, const bool _isBack) {
 	//次のシーン情報を現在のシーン情報に格納する
 	nowScene = _nextScene;
 
@@ -49,15 +49,15 @@ void SceneManager::SceneChange(eScene _nextScene, ShareParameter* _parameter,
 	switch (_nextScene) {
 	//タイトルシーン
 	case eScene::Title:
-		scenes.push(std::make_shared<Title>(this, shareParameter));
+		scenes.push(std::make_shared<Title>(this, _parameter,_gameSystem));
 		break;
 	//メニューシーン
 	case eScene::Menu:
-		scenes.push(std::make_shared<Menu>(this, shareParameter));
+		scenes.push(std::make_shared<Menu>(this, _parameter,_gameSystem));
 		break;
 	//インゲームシーン
 	case eScene::InGame:
-		scenes.push(std::make_shared<InGame>(this, shareParameter));
+		scenes.push(std::make_shared<InGame>(this, _parameter, _gameSystem));
 		break;
 	default:
 		CloseSystem::ExitSystem(eCloseType::Abnormal_Close);

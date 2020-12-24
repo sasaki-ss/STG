@@ -15,11 +15,10 @@ class SceneManager final :public ISceneChanger, Task, CloseSystem {
 private:
 	eScene nowScene;	//現在のシーン
 	std::stack<std::shared_ptr<Scene>> scenes;	//シーンのスタック
-
 	ShareParameter* shareParameter;	//共有パラメータ
 public:
 	//コンストラクタ
-	SceneManager();
+	SceneManager(GameSystem* _gameSystem);
 	//デストラクタ
 	~SceneManager() {}
 	//更新処理
@@ -28,7 +27,7 @@ public:
 	void Draw();
 	//シーン切り替え処理
 	void SceneChange(eScene _nextScene, ShareParameter* _parameter,
-		const bool _isStack, const bool _isBack);
+		GameSystem* _gameSystem, const bool _isStack, const bool _isBack);
 	//現在のシーンを取得
 	eScene GetNowScene()const { return nowScene; }
 	//共有パラメータのインスタンスを取得

@@ -2,8 +2,9 @@
 #include "Menu.h"
 
 //コンストラクタ
-Menu::Menu(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter) :
-	Scene(_sceneChanger, _shareParameter) {
+Menu::Menu(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter,
+	GameSystem* _gameSystem) :
+	Scene(_sceneChanger, _shareParameter, _gameSystem) {
 
 }
 

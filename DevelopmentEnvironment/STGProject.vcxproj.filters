@@ -55,6 +55,33 @@
     <Filter Include="Project\Common\Directory">
       <UniqueIdentifier>{887a1704-a20e-4fef-af06-a31cbde87eb4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Project\GameObject">
+      <UniqueIdentifier>{78480a93-b49a-400e-8b55-fabdad39a101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Player">
+      <UniqueIdentifier>{cf540e04-85d1-41b1-8dfa-724d18db2016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Input">
+      <UniqueIdentifier>{0a298bf3-7e51-44f8-ab91-b5d53f98afd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Input\Keyboard">
+      <UniqueIdentifier>{a5d0654f-4ba9-45a5-af2b-a2bbc735d845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Input\InputManager">
+      <UniqueIdentifier>{f844f988-2696-46a6-84c9-37e039da2951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Bullet">
+      <UniqueIdentifier>{9066d02c-5513-4875-b921-80535d902397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Bullet\BulletManager">
+      <UniqueIdentifier>{c61f2106-a2fc-4738-96ac-e427dc668671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Enemy">
+      <UniqueIdentifier>{e6cc469d-53d8-4317-9803-321d3898eb64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Enemy\EnemyManager">
+      <UniqueIdentifier>{229e4fcc-264d-465b-af37-8451d1c99bee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\Main.cpp">
@@ -98,6 +125,27 @@
     </ClCompile>
     <ClCompile Include="Resource\Source\Directory.cpp">
       <Filter>Project\Common\Directory</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Player.cpp">
+      <Filter>Project\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Keyboard.cpp">
+      <Filter>Project\Input\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\InputManager.cpp">
+      <Filter>Project\Input\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Bullet.cpp">
+      <Filter>Project\GameObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\BulletManager.cpp">
+      <Filter>Project\GameObject\Bullet\BulletManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Enemy.cpp">
+      <Filter>Project\GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\EnemyManager.cpp">
+      <Filter>Project\GameObject\Enemy\EnemyManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +196,30 @@
     </ClInclude>
     <ClInclude Include="Resource\Source\Directory.h">
       <Filter>Project\Common\Directory</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Object.h">
+      <Filter>Project\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Player.h">
+      <Filter>Project\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\InputManager.h">
+      <Filter>Project\Input\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Keyboard.h">
+      <Filter>Project\Input\Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Bullet.h">
+      <Filter>Project\GameObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\BulletManager.h">
+      <Filter>Project\GameObject\Bullet\BulletManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Enemy.h">
+      <Filter>Project\GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\EnemyManager.h">
+      <Filter>Project\GameObject\Enemy\EnemyManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

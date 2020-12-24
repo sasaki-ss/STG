@@ -14,7 +14,7 @@ private:
 		Run		//実行中
 	};
 
-	SceneManager sceneManager;	//シーンマネージャー
+	SceneManager* sceneManager;	//シーンマネージャー
 	GameSystem gameSystem;		//ゲームシステム
 public:
 	bool Init();

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 #include "Directory.h"
 
 //テスト版
@@ -13,14 +14,14 @@
 //画像クラス
 class Image final :public Directory {
 private:
-	std::filesystem::path path;
-	std::vector<std::string> filenames;
+	std::map<std::string, int> images;
+	//読み込み処理
+	int MyLoadImage(std::string _filePath, std::string _fileName);
 public:
 	//初期化処理
 	bool Init();
-
-	std::filesystem::path GetPath() { return path; }
-	std::string GetFileName(int i) { return filenames[i]; }
+	//画像を取得する処理
+	int GetGraph(std::string _imageName);
 };
 
 #endif // !STG_IMAGE_H

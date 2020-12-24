@@ -155,15 +155,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Resource\Source\Bullet.cpp" />
+    <ClCompile Include="Resource\Source\BulletManager.cpp" />
     <ClCompile Include="Resource\Source\CloseSystem.cpp" />
     <ClCompile Include="Resource\Source\Directory.cpp" />
+    <ClCompile Include="Resource\Source\Enemy.cpp" />
+    <ClCompile Include="Resource\Source\EnemyManager.cpp" />
     <ClCompile Include="Resource\Source\Fps.cpp" />
     <ClCompile Include="Resource\Source\GameRunSystem.cpp" />
     <ClCompile Include="Resource\Source\GameSystem.cpp" />
     <ClCompile Include="Resource\Source\Image.cpp" />
     <ClCompile Include="Resource\Source\InGame.cpp" />
+    <ClCompile Include="Resource\Source\InputManager.cpp" />
+    <ClCompile Include="Resource\Source\Keyboard.cpp" />
     <ClCompile Include="Resource\Source\Main.cpp" />
     <ClCompile Include="Resource\Source\Menu.cpp" />
+    <ClCompile Include="Resource\Source\Player.cpp" />
     <ClCompile Include="Resource\Source\RunSystem.cpp" />
     <ClCompile Include="Resource\Source\Scene.cpp" />
     <ClCompile Include="Resource\Source\SceneManager.cpp" />
@@ -171,15 +178,23 @@
     <ClCompile Include="Resource\Source\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Resource\Source\Bullet.h" />
+    <ClInclude Include="Resource\Source\BulletManager.h" />
     <ClInclude Include="Resource\Source\CloseSystem.h" />
     <ClInclude Include="Resource\Source\Directory.h" />
+    <ClInclude Include="Resource\Source\Enemy.h" />
+    <ClInclude Include="Resource\Source\EnemyManager.h" />
     <ClInclude Include="Resource\Source\Fps.h" />
     <ClInclude Include="Resource\Source\GameRunSystem.h" />
     <ClInclude Include="Resource\Source\GameSystem.h" />
     <ClInclude Include="Resource\Source\Image.h" />
     <ClInclude Include="Resource\Source\InGame.h" />
+    <ClInclude Include="Resource\Source\InputManager.h" />
     <ClInclude Include="Resource\Source\ISceneChanger.h" />
+    <ClInclude Include="Resource\Source\Keyboard.h" />
     <ClInclude Include="Resource\Source\Menu.h" />
+    <ClInclude Include="Resource\Source\Object.h" />
+    <ClInclude Include="Resource\Source\Player.h" />
     <ClInclude Include="Resource\Source\RunSystem.h" />
     <ClInclude Include="Resource\Source\Scene.h" />
     <ClInclude Include="Resource\Source\SceneData.h" />
