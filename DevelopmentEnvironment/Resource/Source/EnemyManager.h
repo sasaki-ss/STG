@@ -27,10 +27,6 @@ public:
 	virtual void Draw(GameSystem* _gameSystem);
 	//アクティブな弾の数を取得
 	int GetActiveCount() { return activeCount; }
-
-	//いらない子
-	void Update(){}
-	void Draw(){}
 };
 
 #endif // !STG_ENEMYMANAGER_H

@@ -13,7 +13,7 @@ void RunSystem::Init() {
 	//ウィンドウのタイトルを変更
 	SetMainWindowText("STG");
 	//画面解像度を変更
-	SetGraphMode(1280, 960, 32);
+	SetGraphMode(gameSystem.GetWindow_Width(), gameSystem.GetWindow_Height(), 32);
 	//DXライブラリ
 	if (DxLib_Init()) {
 		CloseSystem::ExitSystem(eCloseType::Init_Error);
@@ -23,6 +23,13 @@ void RunSystem::Init() {
 
 	//裏画面処理を設定する
 	SetDrawScreen(DX_SCREEN_BACK);
+
+	//ゲームシステムを初期化
+	if (!gameSystem.Init()) {
+		CloseSystem::ExitSystem(eCloseType::Init_Error);
+		RunSystem::End();
+		return;
+	}
 }
 
 //実行処理
@@ -31,7 +38,7 @@ void RunSystem::Run() {
 	GameRunSystem gRunSystem;
 
 	//ゲーム実行システムの初期化処理
-	if (!gRunSystem.Init()) {
+	if (!gRunSystem.Init(&gameSystem)) {
 		CloseSystem::ExitSystem(eCloseType::Init_Error);
 		RunSystem::End();
 		return;
@@ -53,7 +60,7 @@ void RunSystem::Run() {
 		fps.Update();
 
 		//ゲームの処理
-		if (!gRunSystem.Run()) {
+		if (!gRunSystem.Run(&gameSystem)) {
 			return;
 		}
 

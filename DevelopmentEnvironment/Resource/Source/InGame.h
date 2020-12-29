@@ -15,12 +15,13 @@ private:
 	EnemyManager* enemyManager;		//エネミー管理クラス
 public:
 	//コンストラクタ
-	InGame(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter,
-		GameSystem* _gameSystem);
+	InGame(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter);
+	//初期化処理
+	void Init(GameSystem* _gameSystem);
 	//更新処理
-	void Update();
+	void Update(GameSystem* _gameSystem);
 	//描画処理
-	void Draw();
+	void Draw(GameSystem* _gameSystem);
 };
 
 #endif // !STG_INGAME_H

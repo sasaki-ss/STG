@@ -12,6 +12,8 @@ class Player;
 //ゲームシステムクラス
 class GameSystem {
 private:
+	static const int WINDOW_WIDTH = 1280;
+	static const int WINDOW_HEIGHT = 960;
 	static const int GAME_WIDTH = 1280;
 	static const int GAME_HEIGHT = 960;
 	typedef struct {
@@ -32,6 +34,10 @@ public:
 	//初期化処理
 	bool Init();
 
+	//画面の横幅を取得
+	int GetWindow_Width()const { return WINDOW_WIDTH; }
+	//画面の高さを取得
+	int GetWindow_Height()const { return WINDOW_HEIGHT; }
 	//画像クラスを取得する
 	Image* GetImage() { return image; }
 	//入力管理クラスを取得

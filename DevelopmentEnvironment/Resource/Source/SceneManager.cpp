@@ -8,21 +8,22 @@
 //コンストラクタ
 SceneManager::SceneManager(GameSystem* _gameSystem) {
 	shareParameter = new ShareParameter();
-	scenes.push(std::make_shared<InGame>(this, shareParameter, _gameSystem));
+	scenes.push(std::make_shared<InGame>(this, shareParameter));
+	scenes.top()->Init(_gameSystem);
 	nowScene = eScene::Title;
 }
 
 //更新処理
-void SceneManager::Update() {
+void SceneManager::Update(GameSystem* _gameSystem) {
 	//シーンの更新処理
-	scenes.top()->Update();
+	scenes.top()->Update(_gameSystem);
 	DrawFormatString(0, 50, GetColor(255, 255, 255), "シーンマネージャー更新中");
 }
 
 //描画処理
-void SceneManager::Draw() {
+void SceneManager::Draw(GameSystem* _gameSystem) {
 	//シーンの描画処理
-	scenes.top()->Draw();
+	scenes.top()->Draw(_gameSystem);
 	DrawFormatString(0, 100, GetColor(255, 255, 255), "シーンマネージャー描画中");
 }
 
@@ -49,15 +50,15 @@ void SceneManager::SceneChange(eScene _nextScene, ShareParameter* _parameter,
 	switch (_nextScene) {
 	//タイトルシーン
 	case eScene::Title:
-		scenes.push(std::make_shared<Title>(this, _parameter,_gameSystem));
+		scenes.push(std::make_shared<Title>(this, _parameter));
 		break;
 	//メニューシーン
 	case eScene::Menu:
-		scenes.push(std::make_shared<Menu>(this, _parameter,_gameSystem));
+		scenes.push(std::make_shared<Menu>(this, _parameter));
 		break;
 	//インゲームシーン
 	case eScene::InGame:
-		scenes.push(std::make_shared<InGame>(this, _parameter, _gameSystem));
+		scenes.push(std::make_shared<InGame>(this, _parameter));
 		break;
 	default:
 		CloseSystem::ExitSystem(eCloseType::Abnormal_Close);

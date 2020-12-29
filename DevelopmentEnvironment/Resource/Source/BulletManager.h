@@ -33,10 +33,6 @@ public:
 	void CreateBullet(float _x, float _y, eBulletType _type);
 	//アクティブな弾の数を取得
 	int GetActiveCount() { return activeCount; }
-
-	//いらない子
-	void Update() {}
-	void Draw() {}
 };
 
 #endif // !STG_BULLETMANAGER_H

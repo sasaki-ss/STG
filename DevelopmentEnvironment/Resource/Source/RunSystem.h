@@ -2,9 +2,12 @@
 #define STG_RUNSYSTEM_H
 
 #include "CloseSystem.h"
+#include "GameSystem.h"
 
 //実行システムクラス
 class RunSystem final :public CloseSystem {
+private:
+	GameSystem gameSystem;
 public:
 	//初期化処理
 	void Init();

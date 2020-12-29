@@ -22,9 +22,9 @@ public:
 	//デストラクタ
 	~SceneManager() {}
 	//更新処理
-	void Update();
+	void Update(GameSystem* _gameSystem);
 	//描画処理
-	void Draw();
+	void Draw(GameSystem* _gameSystem);
 	//シーン切り替え処理
 	void SceneChange(eScene _nextScene, ShareParameter* _parameter,
 		GameSystem* _gameSystem, const bool _isStack, const bool _isBack);

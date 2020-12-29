@@ -37,11 +37,6 @@ public:
 	float GetHeight() { return height; }
 	//アクティブフラグを取得
 	bool GetIsActive() { return isActive; }
-	//正直これいらない子
-	//消すかも
-	//※訳アリ
-	virtual void Update(){}
-	virtual void Draw(){}
 };
 
 #endif // !STG_OBJECT_H

@@ -15,11 +15,11 @@ private:
 	};
 
 	SceneManager* sceneManager;	//シーンマネージャー
-	GameSystem gameSystem;		//ゲームシステム
 public:
-	bool Init();
+	//初期化処理
+	bool Init(GameSystem* _gameSystem);
 	//実行処理
-	bool Run();
+	bool Run(GameSystem* _gameSystem);
 };
 
 #endif // !STG_GAMERUNSYSTEM_H
