@@ -6,7 +6,8 @@
 //エネミークラス
 class Enemy :public virtual Object {
 protected:
-	float moveSpeed;
+	float moveSpeed;	//移動速度
+	int hp;				//体力
 
 	//移動処理
 	virtual void Move(GameSystem* _gameSystem) {}
@@ -14,13 +15,16 @@ protected:
 	virtual void Shot(GameSystem* _gameSystem);
 public:
 	//コンストラクタ
-	Enemy(float _x, float _y, float _width, float _height, float _moveSpeed);
+	Enemy(float _x, float _y, float _width, float _height,
+		float _moveSpeed, int _hp);
 	//デストラクタ
 	virtual ~Enemy() {}
 	//更新処理
 	virtual void Update(GameSystem* _gameSystem);
 	//描画処理
 	virtual void Draw(GameSystem* _gameSystem);
+	//ダメージ処理
+	void Damage(int _damageAmount);
 };
 
 #endif // !STG_ENEMY_H

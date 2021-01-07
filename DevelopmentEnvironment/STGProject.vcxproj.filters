@@ -73,13 +73,25 @@
     <Filter Include="Project\GameObject\Bullet">
       <UniqueIdentifier>{9066d02c-5513-4875-b921-80535d902397}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\GameObject\Bullet\BulletManager">
-      <UniqueIdentifier>{c61f2106-a2fc-4738-96ac-e427dc668671}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Project\GameObject\Enemy">
       <UniqueIdentifier>{e6cc469d-53d8-4317-9803-321d3898eb64}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\GameObject\Enemy\EnemyManager">
+    <Filter Include="Project\GameObject\Bullet\BulletP">
+      <UniqueIdentifier>{3fa81a49-bee2-4fd4-91da-7739c65c5390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Bullet\BulletE_Normal">
+      <UniqueIdentifier>{d514bf70-65a4-4558-8ab5-4d89b63eb6d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\Manager">
+      <UniqueIdentifier>{fd1c4a80-1ac3-43a6-933e-30cf772476a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\Manager\GameManager">
+      <UniqueIdentifier>{4c9c066c-bdea-4c31-b463-14e60e944fba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\Manager\BulletManager">
+      <UniqueIdentifier>{c61f2106-a2fc-4738-96ac-e427dc668671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Common\Manager\EnemyManager">
       <UniqueIdentifier>{229e4fcc-264d-465b-af37-8451d1c99bee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -139,13 +151,22 @@
       <Filter>Project\GameObject\Bullet</Filter>
     </ClCompile>
     <ClCompile Include="Resource\Source\BulletManager.cpp">
-      <Filter>Project\GameObject\Bullet\BulletManager</Filter>
+      <Filter>Project\Common\Manager\BulletManager</Filter>
     </ClCompile>
     <ClCompile Include="Resource\Source\Enemy.cpp">
       <Filter>Project\GameObject\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Resource\Source\EnemyManager.cpp">
-      <Filter>Project\GameObject\Enemy\EnemyManager</Filter>
+      <Filter>Project\Common\Manager\EnemyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\BulletP.cpp">
+      <Filter>Project\GameObject\Bullet\BulletP</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\BulletE_Normal.cpp">
+      <Filter>Project\GameObject\Bullet\BulletE_Normal</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\GameManager.cpp">
+      <Filter>Project\Common\Manager\GameManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -213,13 +234,22 @@
       <Filter>Project\GameObject\Bullet</Filter>
     </ClInclude>
     <ClInclude Include="Resource\Source\BulletManager.h">
-      <Filter>Project\GameObject\Bullet\BulletManager</Filter>
+      <Filter>Project\Common\Manager\BulletManager</Filter>
     </ClInclude>
     <ClInclude Include="Resource\Source\Enemy.h">
       <Filter>Project\GameObject\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Resource\Source\EnemyManager.h">
-      <Filter>Project\GameObject\Enemy\EnemyManager</Filter>
+      <Filter>Project\Common\Manager\EnemyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\BulletP.h">
+      <Filter>Project\GameObject\Bullet\BulletP</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\BulletE_Normal.h">
+      <Filter>Project\GameObject\Bullet\BulletE_Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\GameManager.h">
+      <Filter>Project\Common\Manager\GameManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

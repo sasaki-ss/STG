@@ -6,6 +6,7 @@
 #include "Player.h"
 #include "BulletManager.h"
 #include "EnemyManager.h"
+#include "GameManager.h"
 
 //タイトルクラス
 class InGame final :public Scene {
@@ -13,6 +14,7 @@ private:
 	Player* player;					//プレイヤー
 	BulletManager* bulletManager;	//弾管理クラス
 	EnemyManager* enemyManager;		//エネミー管理クラス
+	GameManager* gameManager;		//ゲーム管理クラス
 public:
 	//コンストラクタ
 	InGame(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter);

@@ -156,12 +156,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\Bullet.cpp" />
+    <ClCompile Include="Resource\Source\BulletE_Normal.cpp" />
     <ClCompile Include="Resource\Source\BulletManager.cpp" />
+    <ClCompile Include="Resource\Source\BulletP.cpp" />
     <ClCompile Include="Resource\Source\CloseSystem.cpp" />
     <ClCompile Include="Resource\Source\Directory.cpp" />
     <ClCompile Include="Resource\Source\Enemy.cpp" />
     <ClCompile Include="Resource\Source\EnemyManager.cpp" />
     <ClCompile Include="Resource\Source\Fps.cpp" />
+    <ClCompile Include="Resource\Source\GameManager.cpp" />
     <ClCompile Include="Resource\Source\GameRunSystem.cpp" />
     <ClCompile Include="Resource\Source\GameSystem.cpp" />
     <ClCompile Include="Resource\Source\Image.cpp" />
@@ -179,12 +182,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource\Source\Bullet.h" />
+    <ClInclude Include="Resource\Source\BulletE_Normal.h" />
     <ClInclude Include="Resource\Source\BulletManager.h" />
+    <ClInclude Include="Resource\Source\BulletP.h" />
     <ClInclude Include="Resource\Source\CloseSystem.h" />
     <ClInclude Include="Resource\Source\Directory.h" />
     <ClInclude Include="Resource\Source\Enemy.h" />
     <ClInclude Include="Resource\Source\EnemyManager.h" />
     <ClInclude Include="Resource\Source\Fps.h" />
+    <ClInclude Include="Resource\Source\GameManager.h" />
     <ClInclude Include="Resource\Source\GameRunSystem.h" />
     <ClInclude Include="Resource\Source\GameSystem.h" />
     <ClInclude Include="Resource\Source\Image.h" />

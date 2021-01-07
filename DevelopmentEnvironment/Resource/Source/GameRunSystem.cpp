@@ -1,6 +1,7 @@
 #include <DxLib.h>
 #include "GameRunSystem.h"
 
+//初期化処理
 bool GameRunSystem::Init(GameSystem* _gameSystem) {
 	sceneManager = new SceneManager(_gameSystem);
 
@@ -17,10 +18,8 @@ bool GameRunSystem::Run(GameSystem* _gameSystem) {
 		return false;
 	}
 
+	//キーボードの更新
 	_gameSystem->GetInputManager()->GetKeyboard()->Update();
-
-	DrawFormatString(0, 0, GetColor(255, 255, 255), "ゲーム実行システムクラス実行処理");
-	DrawFormatString(0, 25, GetColor(255, 255, 255), "%d", static_cast<int>(sceneManager->GetNowScene()));
 
 	//シーンの更新処理
 	sceneManager->Update(_gameSystem);

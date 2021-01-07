@@ -1,3 +1,4 @@
+#include <DxLib.h>
 #include "EnemyManager.h"
 
 //コンストラクタ
@@ -9,7 +10,7 @@ EnemyManager::EnemyManager(int _difficulty) {
 
 	activeCount = 0;
 
-	enemys[0] = new Enemy(500, 0, 32, 32, 3);
+	enemys[0] = new Enemy(500, 0, 32, 32, 3, 100);
 	activeCount++;
 }
 
@@ -98,5 +99,45 @@ void EnemyManager::Destroy() {
 				enemys[i] = nullptr;
 			}
 		}
+	}
+}
+
+//ダメージ処理
+void EnemyManager::Damage(int _num, int _damageAmount) {
+	//enemys[_num]が空でない場合
+	if (enemys[_num] != nullptr) {
+		enemys[_num]->Damage(_damageAmount);
+	}
+}
+
+//座標を取得する
+Pos EnemyManager::GetPos(int _num) {
+	//enemys[_num]が空でない場合
+	if (enemys[_num] != nullptr) {
+		return enemys[_num]->GetPos();
+	}
+}
+
+//横幅を取得
+float EnemyManager::GetWidth(int _num) {
+	//enemys[_num]が空でない場合
+	if (enemys[_num] != nullptr) {
+		return enemys[_num]->GetWidth();
+	}
+}
+
+//高さを取得
+float EnemyManager::GetHeight(int _num) {
+	//enemys[_num]が空でない場合
+	if (enemys[_num] != nullptr) {
+		return enemys[_num]->GetHeight();
+	}
+}
+
+//アクティブ状態を取得する
+bool EnemyManager::GetIsActive(int _num) {
+	//enemys[_num]が空でない場合
+	if (enemys[_num] != nullptr) {
+		return enemys[_num]->GetIsActive();
 	}
 }

@@ -17,14 +17,12 @@ SceneManager::SceneManager(GameSystem* _gameSystem) {
 void SceneManager::Update(GameSystem* _gameSystem) {
 	//シーンの更新処理
 	scenes.top()->Update(_gameSystem);
-	DrawFormatString(0, 50, GetColor(255, 255, 255), "シーンマネージャー更新中");
 }
 
 //描画処理
 void SceneManager::Draw(GameSystem* _gameSystem) {
 	//シーンの描画処理
 	scenes.top()->Draw(_gameSystem);
-	DrawFormatString(0, 100, GetColor(255, 255, 255), "シーンマネージャー描画中");
 }
 
 //シーン切り替え処理

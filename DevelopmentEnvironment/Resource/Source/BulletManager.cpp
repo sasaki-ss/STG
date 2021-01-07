@@ -1,5 +1,8 @@
 #include "BulletManager.h"
 
+#include "BulletP.h"
+#include "BulletE_Normal.h"
+
 //コンストラクタ
 BulletManager::BulletManager() {
 	//初期化
@@ -21,7 +24,8 @@ void BulletManager::Update(GameSystem* _gameSystem) {
 	BulletManager::Destroy();
 	//整理処理
 	BulletManager::Organize();
-	//更新処理
+
+	//敵の弾の更新処理
 	for (int i = 0; i < activeCount; i++) {
 		//bullets[i]が空でない場合
 		if (bullets[i] != nullptr) {
@@ -50,10 +54,11 @@ void BulletManager::CreateBullet(float _x, float _y, eBulletType _type) {
 			switch (_type) {
 			//プレイヤーの弾を生成
 			case eBulletType::Player:
-				bullets[i] = new Bullet(_x - (16 / 2), _y, 16, 16, 5);
+				bullets[i] = new BulletP(_x - (16 / 2), _y, 16, 16, 5, "Player");
 				return;
-			case eBulletType::Enemy1:
-				bullets[i] = new Bullet(_x - (16 / 2), _y, 16, 16, 5);
+			//エネミーの弾を生成
+			case eBulletType::Enemy_Normal:
+				bullets[i] = new BulletE_Normal(_x - (16 / 2), _y, 16, 16, 5, "Enemy");
 				return;
 			default:
 				break;
@@ -114,5 +119,53 @@ void BulletManager::Destroy() {
 				bullets[i] = nullptr;
 			}
 		}
+	}
+}
+
+//座標を取得する
+Pos BulletManager::GetPos(int _num) {
+	//bullets[i]が空でない場合
+	if (bullets[_num] != nullptr) {
+		return bullets[_num]->GetPos();
+	}
+}
+
+//横幅を取得
+float BulletManager::GetWidth(int _num) {
+	//bullets[i]が空でない場合
+	if (bullets[_num] != nullptr) {
+		return bullets[_num]->GetWidth();
+	}
+}
+
+//高さを取得
+float BulletManager::GetHeight(int _num) {
+	//bullets[i]が空でない場合
+	if (bullets[_num] != nullptr) {
+		return bullets[_num]->GetHeight();
+	}
+}
+
+//アクティブ状態を取得する
+bool BulletManager::GetIsActive(int _num) {
+	//bullets[i]が空でない場合
+	if (bullets[_num] != nullptr) {
+		return bullets[_num]->GetIsActive();
+	}
+}
+
+//タグを取得する
+string BulletManager::GetTag(int _num) {
+	//bullets[i]が空でない場合
+	if (bullets[_num] != nullptr) {
+		return bullets[_num]->GetTag();
+	}
+}
+
+//アクティブフラグをセットする
+void BulletManager::SetIsActive(int _num, bool _isActive) {
+	//bullets[i]が空でない場合
+	if (bullets[_num] != nullptr) {
+		bullets[_num]->SetIsActive(_isActive);
 	}
 }

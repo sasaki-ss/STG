@@ -4,7 +4,8 @@
 #include "BulletManager.h"
 
 //コンストラクタ
-Enemy::Enemy(float _x, float _y, float _width, float _height, float _moveSpeed) {
+Enemy::Enemy(float _x, float _y, float _width, float _height,
+	float _moveSpeed, int _hp) {
 	pos.x = _x;
 	pos.y = _y;
 	width = _width;
@@ -13,10 +14,12 @@ Enemy::Enemy(float _x, float _y, float _width, float _height, float _moveSpeed) 
 	pos.cy = pos.y + (height / 2);
 	moveSpeed = _moveSpeed;
 	isActive = true;
+	hp = _hp;
 }
 
 //更新処理
 void Enemy::Update(GameSystem* _gameSystem) {
+	//発射処理
 	Enemy::Shot(_gameSystem);
 
 	pos.y += moveSpeed;
@@ -29,17 +32,30 @@ void Enemy::Update(GameSystem* _gameSystem) {
 //描画処理
 void Enemy::Draw(GameSystem* _gameSystem) {
 	DrawGraph(pos.x, pos.y, _gameSystem->GetImage()->GetGraph("Enemy.png"), TRUE);
+
+	DrawFormatString(1000, 75, GetColor(255, 255, 255), "敵のHP : %d", hp);
 }
 
+//発射処理
 void Enemy::Shot(GameSystem* _gameSystem) {
-	static int count = 0;
+	static int count = 40;
 
-	if (count > 20)count = 0;
+	if (count > 40)count = 0;
 
-	if (count == 20) {
-		_gameSystem->GetGameObjects().bulletManager->CreateBullet(
-			pos.cx, pos.y, eBulletType::Enemy1);
+	if (count == 40) {
+		_gameSystem->GetBulletManagerObj()->CreateBullet(
+			pos.cx, pos.y, eBulletType::Enemy_Normal);
 	}
 
 	count++;
+}
+
+void Enemy::Damage(int _damageAmount) {
+	//体力をダメージ量分減らす
+	hp -= _damageAmount;
+
+	//残基が0以下の場合
+	if (hp <= 0) {
+		isActive = false;
+	}
 }

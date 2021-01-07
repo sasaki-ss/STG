@@ -12,20 +12,21 @@ class Player;
 //ゲームシステムクラス
 class GameSystem {
 private:
-	static const int WINDOW_WIDTH = 1280;
-	static const int WINDOW_HEIGHT = 960;
-	static const int GAME_WIDTH = 1280;
-	static const int GAME_HEIGHT = 960;
-	typedef struct {
-		BulletManager* bulletManager;
-		EnemyManager* enemyManager;
-		Player* player;
-	}GameObjects;
+	static const int WINDOW_WIDTH = 1280;	//ウィンドウの横幅
+	static const int WINDOW_HEIGHT = 960;	//ウィンドウの高さ
+	static const float GAME_WIDTH;			//ゲーム画面の横幅
+	static const float GAME_HEIGHT;			//ゲーム画面の高さ
 
+	//リソース
 	Image* image;					//画像クラス
+
+	//入力関連
 	InputManager* inputManager;		//入力管理クラス
 
-	GameObjects gameObjects;	//ゲームオブジェクト
+	//ゲームオブジェクト
+	BulletManager* bulletManager;
+	EnemyManager* enemyManager;
+	Player* player;
 public:
 	//コンストラクタ
 	GameSystem();
@@ -39,21 +40,25 @@ public:
 	//画面の高さを取得
 	int GetWindow_Height()const { return WINDOW_HEIGHT; }
 	//画像クラスを取得する
-	Image* GetImage() { return image; }
+	Image* GetImage()const { return image; }
 	//入力管理クラスを取得
-	InputManager* GetInputManager() { return inputManager; }
-	//ゲームオブジェクト構造体を取得する
-	GameObjects GetGameObjects() { return gameObjects; }
-	//プレイヤーをゲームオブジェクト構造体に格納する
-	void SetObjectsPlayer(Player* _player) { gameObjects.player = _player; }
-	//弾管理クラスをゲームオブジェクト構造体に格納する
-	void SetObjectsBulletManager(BulletManager* _bulletMangaer){
-		gameObjects.bulletManager = _bulletMangaer;
+	InputManager* GetInputManager()const { return inputManager; }
+	//弾管理クラスを取得する
+	BulletManager* GetBulletManagerObj()const { return bulletManager; }
+	//敵管理クラスを取得
+	EnemyManager* GetEnemyManagerObj()const { return enemyManager; }
+	//プレイヤークラスを取得
+	Player* GetPlayerObj()const { return player; }
+	//弾管理クラスをセットする
+	void SetBulletManagerObj(BulletManager* _bulletManager) {
+		bulletManager = _bulletManager;
 	}
-	//エネミー管理クラスをゲームオブジェクト構造体に格納する
-	void SetObjectsEnemyManager(EnemyManager* _enemyManager) {
-		gameObjects.enemyManager = _enemyManager;
+	//敵管理クラスをセットする
+	void SetEnemyManagerObj(EnemyManager* _enemyManager) {
+		enemyManager = _enemyManager;
 	}
+	//プレイヤークラスをセットする
+	void SetPlayerObj(Player* _player) { player = _player; }
 };
 
 #endif // !STG_GAMESYSTEM_H

@@ -2,7 +2,8 @@
 #include "Bullet.h"
 
 //コンストラクタ
-Bullet::Bullet(float _x, float _y, float _width, float _height, float _moveSpeed) {
+Bullet::Bullet(float _x, float _y, float _width, float _height,
+	float _moveSpeed, string _tag) {
 	pos.x = _x;
 	pos.y = _y;
 	width = _width;
@@ -11,6 +12,7 @@ Bullet::Bullet(float _x, float _y, float _width, float _height, float _moveSpeed
 	pos.cy = pos.y + (height / 2);
 	moveSpeed = _moveSpeed;
 	isActive = true;
+	tag = _tag;
 }
 
 //更新処理

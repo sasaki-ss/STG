@@ -4,17 +4,17 @@
 #include "Task.h"
 #include "GameSystem.h"
 
+//座標構造体
+typedef struct {
+	float x;
+	float y;
+	float cx;
+	float cy;
+}Pos;
+
 //オブジェクトクラス
 //全てのゲームオブジェクトに継承させる
 class Object :public Task {
-private:
-	//座標構造体
-	typedef struct {
-		float x;
-		float y;
-		float cx;
-		float cy;
-	}Pos;
 protected:
 	Pos pos;		//座標
 	float width;	//横幅
