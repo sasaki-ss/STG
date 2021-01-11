@@ -11,7 +11,7 @@ BulletE_Normal::BulletE_Normal(float _x, float _y, float _width, float _height,
 //更新処理
 void BulletE_Normal::Update(GameSystem* _gameSystem) {
 	//画面外に弾が出た場合
-	if (pos.y + height >= 960) {
+	if (pos.y >= _gameSystem->GetGameArea().down) {
 		isActive = false;
 		return;
 	}

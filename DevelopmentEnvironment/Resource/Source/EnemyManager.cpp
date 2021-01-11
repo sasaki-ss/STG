@@ -1,6 +1,8 @@
 #include <DxLib.h>
 #include "EnemyManager.h"
 
+#include "Brainwasher.h"
+
 //コンストラクタ
 EnemyManager::EnemyManager(int _difficulty) {
 	//初期化
@@ -10,7 +12,16 @@ EnemyManager::EnemyManager(int _difficulty) {
 
 	activeCount = 0;
 
-	enemys[0] = new Enemy(500, 0, 32, 32, 3, 100);
+	//enemys[0] = new Enemy(500, 0, 32, 32, 3, 100);
+	enemys[0] = new Brainwasher(64, 0, 32, 32, 2.0f, 100, 120);
+	enemys[1] = new Brainwasher(164, 0, 32, 32, 2.0f, 100, 120);
+	enemys[2] = new Brainwasher(264, 0, 32, 32, 2.0f, 100, 120);
+	enemys[3] = new Brainwasher(364, 0, 32, 32, 2.0f, 100, 120);
+	enemys[4] = new Brainwasher(464, 0, 32, 32, 2.0f, 100, 120);
+	enemys[5] = new Brainwasher(564, 0, 32, 32, 2.0f, 100, 120);
+	enemys[6] = new Brainwasher(664, 0, 32, 32, 2.0f, 100, 120);
+	enemys[7] = new Brainwasher(764, 0, 32, 32, 2.0f, 100, 120);
+
 	activeCount++;
 }
 

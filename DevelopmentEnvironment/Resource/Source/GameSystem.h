@@ -12,10 +12,20 @@ class Player;
 //ゲームシステムクラス
 class GameSystem {
 private:
+	//ゲーム画面の座標構造体
+	typedef struct {
+		int left;	//左端
+		int right;	//右端
+		int up;		//上端
+		int down;	//下端
+	}GameArea;
+
 	static const int WINDOW_WIDTH = 1280;	//ウィンドウの横幅
 	static const int WINDOW_HEIGHT = 960;	//ウィンドウの高さ
-	static const float GAME_WIDTH;			//ゲーム画面の横幅
-	static const float GAME_HEIGHT;			//ゲーム画面の高さ
+	static const int GAME_WIDTH = 768;		//ゲーム画面の横幅
+	static const int GAME_HEIGHT = 896;		//ゲーム画面の高さ
+
+	const GameArea gameArea = { 64,832,32,928 };	//ゲーム画面の座標
 
 	//リソース
 	Image* image;					//画像クラス
@@ -39,6 +49,8 @@ public:
 	int GetWindow_Width()const { return WINDOW_WIDTH; }
 	//画面の高さを取得
 	int GetWindow_Height()const { return WINDOW_HEIGHT; }
+	//ゲーム画面の座標を取得する
+	GameArea GetGameArea()const { return gameArea; }
 	//画像クラスを取得する
 	Image* GetImage()const { return image; }
 	//入力管理クラスを取得

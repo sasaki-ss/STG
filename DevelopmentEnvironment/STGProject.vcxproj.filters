@@ -94,6 +94,15 @@
     <Filter Include="Project\Common\Manager\EnemyManager">
       <UniqueIdentifier>{229e4fcc-264d-465b-af37-8451d1c99bee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Project\GameObject\Enemy\Brainwasher">
+      <UniqueIdentifier>{a757989f-0ecc-4177-a6b5-93ef9817aa2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Background">
+      <UniqueIdentifier>{9b8c01b1-36db-43fd-b81d-04d53084125e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\UI">
+      <UniqueIdentifier>{9fb4b935-38db-41cc-87fa-e035bc43aa7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Resource\Source\Main.cpp">
@@ -167,6 +176,15 @@
     </ClCompile>
     <ClCompile Include="Resource\Source\GameManager.cpp">
       <Filter>Project\Common\Manager\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Brainwasher.cpp">
+      <Filter>Project\GameObject\Enemy\Brainwasher</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\UI.cpp">
+      <Filter>Project\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Source\Background.cpp">
+      <Filter>Project\Background</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +268,15 @@
     </ClInclude>
     <ClInclude Include="Resource\Source\GameManager.h">
       <Filter>Project\Common\Manager\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Brainwasher.h">
+      <Filter>Project\GameObject\Enemy\Brainwasher</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\UI.h">
+      <Filter>Project\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Source\Background.h">
+      <Filter>Project\Background</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

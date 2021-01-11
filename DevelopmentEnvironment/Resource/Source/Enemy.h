@@ -7,6 +7,8 @@
 class Enemy :public virtual Object {
 protected:
 	float moveSpeed;	//移動速度
+	float fireRate;		//発射速度
+	float fireCount;	//発射カウント
 	int hp;				//体力
 
 	//移動処理
@@ -16,7 +18,7 @@ protected:
 public:
 	//コンストラクタ
 	Enemy(float _x, float _y, float _width, float _height,
-		float _moveSpeed, int _hp);
+		float _moveSpeed, int _hp, float _fireRate);
 	//デストラクタ
 	virtual ~Enemy() {}
 	//更新処理

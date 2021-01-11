@@ -36,6 +36,11 @@ void InGame::Update(GameSystem* _gameSystem) {
 
 //描画処理
 void InGame::Draw(GameSystem* _gameSystem) {
+	//背景の描画
+	buckground.Draw(_gameSystem);
+
+	//UIの描画
+	ui.Draw(_gameSystem);
 
 	//ゲーム実行中の処理
 	if (!gameManager->GetIsGameOver()) {
@@ -45,8 +50,12 @@ void InGame::Draw(GameSystem* _gameSystem) {
 	}
 	//ゲームオーバー時の処理
 	else {
-		DrawString(500, 500, "GAME OVER", GetColor(255, 255, 255));
+		DrawString(300, 300, "GAME OVER", GetColor(255, 255, 255));
 	}
+
+	//ゲーム画面の枠組みを表示
+	DrawGraph(0, 0, _gameSystem->GetImage()->GetGraph("InGame_Front_BG.png"), TRUE);
+
 
 	//デバック用
 	DrawFormatString(1000, 0, GetColor(255, 255, 255), "playerの残基　　　　  : %d",

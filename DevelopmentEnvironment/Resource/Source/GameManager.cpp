@@ -30,32 +30,21 @@ void GameManager::Update(GameSystem* _gameSystem) {
 	//プレイヤーの高さ
 	float ph = _gameSystem->GetPlayerObj()->GetHeight();
 
-	float ex[100];	//エネミーのx座標
-	float ey[100];	//エネミーのy座標
-	float ew[100];	//エネミーの横幅
-	float eh[100];	//エネミーの高さ
+	float ex[100] = { 0.0f };	//エネミーのx座標
+	float ey[100] = { 0.0f };	//エネミーのy座標
+	float ew[100] = { 0.0f };	//エネミーの横幅
+	float eh[100] = { 0.0f };	//エネミーの高さ
 
-	float bx[1000];			//弾のx座標
-	float by[1000];			//弾のy座標
-	float bw[1000];			//弾の横幅
-	float bh[1000];			//弾の高さ
-	string bulletTag[1000];	//弾のタグ
+	float bx[1000] = { 0.0f };		//弾のx座標
+	float by[1000] = { 0.0f };		//弾のy座標
+	float bw[1000] = { 0.0f };		//弾の横幅
+	float bh[1000] = { 0.0f };		//弾の高さ
+	string bulletTag[1000] = {""};	//弾のタグ
 
 	//エネミーのアクティブな数
 	int eActCount = _gameSystem->GetEnemyManagerObj()->GetActiveCount();
 	//弾のアクティブな数
 	int bActCount = _gameSystem->GetBulletManagerObj()->GetActiveCount();
-	
-	//配列の初期化
-	memset(ex, 0, sizeof(ex));
-	memset(ey, 0, sizeof(ey));
-	memset(ew, 0, sizeof(ew));
-	memset(eh, 0, sizeof(eh));
-	memset(bx, 0, sizeof(bx));
-	memset(by, 0, sizeof(by));
-	memset(bw, 0, sizeof(bw));
-	memset(bh, 0, sizeof(bh));
-	memset(bulletTag, 0, sizeof(bulletTag));
 
 	//エネミーの座標、横幅、高さを取得する
 	for (int i = 0; i < eActCount; i++) {
@@ -124,6 +113,7 @@ void GameManager::Update(GameSystem* _gameSystem) {
 	}
 }
 
+//四角形と四角形の当たり判定
 bool GameManager::CollisionSqare(float _fX, float _fY, float _fW, float _fH,
 	float _sX, float _sY, float _sW, float _sH) {
 
@@ -137,6 +127,7 @@ bool GameManager::CollisionSqare(float _fX, float _fY, float _fW, float _fH,
 	return false;
 }
 
+//円と円の当たり判定
 bool GameManager::CollisionCircle(float _fX, float _fY, float _fR,
 	float _sX, float _sY, float _sR) {
 

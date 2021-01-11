@@ -1,13 +1,13 @@
 #include <DxLib.h>
 #include "GameSystem.h"
 
-const float GameSystem::GAME_WIDTH = 1280;
-const float GameSystem::GAME_HEIGHT = 960;
-
 //コンストラクタ
 GameSystem::GameSystem() {
 	image = new Image();
 	inputManager = new InputManager();
+	bulletManager = nullptr;
+	enemyManager = nullptr;
+	player = nullptr;
 }
 
 //デストラクタ

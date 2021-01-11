@@ -7,6 +7,8 @@
 #include "BulletManager.h"
 #include "EnemyManager.h"
 #include "GameManager.h"
+#include "UI.h"
+#include "Background.h"
 
 //タイトルクラス
 class InGame final :public Scene {
@@ -15,6 +17,9 @@ private:
 	BulletManager* bulletManager;	//弾管理クラス
 	EnemyManager* enemyManager;		//エネミー管理クラス
 	GameManager* gameManager;		//ゲーム管理クラス
+
+	UI ui;					//UIクラス
+	Buckground buckground;	//背景クラス
 public:
 	//コンストラクタ
 	InGame(ISceneChanger* _sceneChanger, ShareParameter* _shareParameter);

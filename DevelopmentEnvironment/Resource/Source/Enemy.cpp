@@ -5,7 +5,7 @@
 
 //コンストラクタ
 Enemy::Enemy(float _x, float _y, float _width, float _height,
-	float _moveSpeed, int _hp) {
+	float _moveSpeed, int _hp, float _fireRate) {
 	pos.x = _x;
 	pos.y = _y;
 	width = _width;
@@ -15,6 +15,8 @@ Enemy::Enemy(float _x, float _y, float _width, float _height,
 	moveSpeed = _moveSpeed;
 	isActive = true;
 	hp = _hp;
+	fireRate = _fireRate;
+	fireCount = fireRate;
 }
 
 //更新処理
@@ -32,8 +34,6 @@ void Enemy::Update(GameSystem* _gameSystem) {
 //描画処理
 void Enemy::Draw(GameSystem* _gameSystem) {
 	DrawGraph(pos.x, pos.y, _gameSystem->GetImage()->GetGraph("Enemy.png"), TRUE);
-
-	DrawFormatString(1000, 75, GetColor(255, 255, 255), "敵のHP : %d", hp);
 }
 
 //発射処理

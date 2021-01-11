@@ -11,7 +11,7 @@ BulletP::BulletP(float _x, float _y, float _width, float _height,
 //更新処理
 void BulletP::Update(GameSystem* _gameSystem) {
 	//画面外に弾が出た場合
-	if (pos.y + height <= 0) {
+	if (pos.y + height <= _gameSystem->GetGameArea().up) {
 		isActive = false;
 		return;
 	}

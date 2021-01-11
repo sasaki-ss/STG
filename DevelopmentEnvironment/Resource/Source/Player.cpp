@@ -42,31 +42,49 @@ void Player::Draw(GameSystem* _gameSystem) {
 
 //移動処理
 void Player::Move(GameSystem* _gameSystem) {
-	//キー関連の処理この後実装する
-	//移動制御ものちに加える
 
 	//前進
 	if (_gameSystem->GetInputManager()->GetKeyboard()->GetPressCount(
 		_gameSystem->GetInputManager()->GetKey(eOperationType::Up)) != 0) {
 		pos.y -= moveSpeed;
+
+		//移動制御
+		if (pos.y < _gameSystem->GetGameArea().up) {
+			pos.y = _gameSystem->GetGameArea().up;
+		}
 	}
 
 	//左
 	if (_gameSystem->GetInputManager()->GetKeyboard()->GetPressCount(
 		_gameSystem->GetInputManager()->GetKey(eOperationType::Left)) != 0) {
 		pos.x -= moveSpeed;
+
+		//移動制御
+		if (pos.x < _gameSystem->GetGameArea().left) {
+			pos.x = _gameSystem->GetGameArea().left;
+		}
 	}
 
 	//後退
 	if (_gameSystem->GetInputManager()->GetKeyboard()->GetPressCount(
 		_gameSystem->GetInputManager()->GetKey(eOperationType::Down)) != 0) {
 		pos.y += moveSpeed;
+
+		//移動制御
+		if (pos.y + height > _gameSystem->GetGameArea().down) {
+			pos.y = _gameSystem->GetGameArea().down - height;
+		}
 	}
 
 	//右
 	if (_gameSystem->GetInputManager()->GetKeyboard()->GetPressCount(
 		_gameSystem->GetInputManager()->GetKey(eOperationType::Right)) != 0) {
 		pos.x += moveSpeed;
+
+		//移動制御
+		if (pos.x + width > _gameSystem->GetGameArea().right) {
+			pos.x = _gameSystem->GetGameArea().right - width;
+		}
 	}
 }
 
